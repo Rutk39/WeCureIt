@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import * as React from "react";
 import { Frame } from 'react-frame-component';
 //import { PropertyDefault } from "./PropertyDefault";
 //import { TopBar } from "./TopBar";
