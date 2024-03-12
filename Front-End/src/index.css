@@ -4,3 +4,14 @@
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
 }
+.nebula {
+  width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .nebula {
+     width: 100%;
+     overflow: hidden;
+     margin: 0 -150px 0 -150px;
+  }
+}
