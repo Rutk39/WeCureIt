@@ -7,6 +7,8 @@
 
 .main-container {
     overflow: hidden;
+    max-width: 100%;
+    max-height: fit-content;
 }
 
 .main-container,
@@ -285,14 +287,15 @@ button {
     flex-shrink: 0;
     gap: 10px;
     position: relative;
-    width: 82px;
+    width: 404px;
     z-index: 21;
 }
 .text-6 {
     flex-shrink: 0;
     flex-basis: auto;
     position: relative;
-    height: 15px;
+    width: 404px;
+    height: 32px;
     color: #d9d9d9;
     font-family: Poppins, var(--default-font-family);
     font-size: 10px;
@@ -354,8 +357,7 @@ button {
 }
 .section-7 {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
     flex-shrink: 0;
     gap: 10px;
@@ -446,7 +448,7 @@ button {
     position: relative;
     width: 254.507px;
     height: 23.789px;
-    margin: 196.901px 0 0 80px;
+    margin: 100.901px 0 0 80px;
     z-index: 29;
 }
 .group-8 {
@@ -499,4 +501,24 @@ button {
         no-repeat center;
     background-size: cover;
     z-index: 36;
+}
+.button {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+    width: 404px;
+    height: 32px;
+    padding: 10px 0 10px 10px;
+    background: #3a5b22;
+    border: 1px solid #3a5b22;
+    z-index: 33;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.button:hover{
+    background:#679745;
+    box-shadow: #1a1a1a 2px;
 }

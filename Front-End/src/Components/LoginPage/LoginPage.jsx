@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LoginPage.css';
 
 export default function Main() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleLogin = () => {
+        // Handle login logic here
+        console.log("Email:", email);
+        console.log("Password:", password);
+    };
+
     return (
         <div className='main-container'>
             <div className='section'>
@@ -36,9 +45,15 @@ export default function Main() {
                         <div className='wrapper-2'>
                             <span className='text-5'>Email address</span>
                         </div>
-                        <div className='section-4'>
+                        <div className='inputfield'>
                             <div className='wrapper-3'>
-                                <span className='text-6'>Enter your email</span>
+                                <input
+                                    className='section-4'
+                                    type='email'
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    placeholder='Enter your email'
+                                />
                             </div>
                         </div>
                     </div>
@@ -46,9 +61,15 @@ export default function Main() {
                         <div className='section-6'>
                             <span className='text-7'>Password</span>
                         </div>
-                        <div className='wrapper-4'>
+                        <div className='inputpassword'>
                             <div className='section-7'>
-                                <span className='text-8'>Password</span>
+                                <input
+                                    className='wrapper-4'
+                                    type='password'
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    placeholder='Password'
+                                />
                             </div>
                         </div>
                     </div>
@@ -58,12 +79,13 @@ export default function Main() {
                                 <div className='wrapper-5' />
                             </div>
                         </div>
-                        <span className='text-9'>Login</span>
+                        <button className='box-6 button' onClick={handleLogin}>
+                            <label className='text-9'>Login</label>
+                            </button>
                     </div>
                     <div className='group-7'>
                         <div className='group-8'>
-                            <span className='text-a'>Don’t h</span>
-                            <span className='text-b'>ave an account? </span>
+                            <span className='text-a'>Don’t have an account? </span>
                             <span className='text-c'>Sign Up</span>
                         </div>
                     </div>
