@@ -91,7 +91,7 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <div className='pic-2' />
+            <div className='pic-2'><img src='Front-End/src/assets/react.svg'/></div>
         </div>
     );
 }

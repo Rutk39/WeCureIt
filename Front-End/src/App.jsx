@@ -4,8 +4,8 @@ import LoginPage from './Components/LoginPage/LoginPage';
 export default function App() {
   return (
     <div className='app'>
-      <LoginPage />
       <main>
+      <LoginPage />
       </main>
     </div>
   );

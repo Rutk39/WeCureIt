@@ -107,7 +107,7 @@ button {
     height: 100%;
     top: 0;
     left: 0;
-    background: url(../assets/LoginImg.png)
+    background: url(Front-End/src/assets/images/LoginImg.png)
         no-repeat center;
     background-size: 100% 100%;
     z-index: 7;
@@ -494,12 +494,11 @@ button {
     text-align: left;
 }
 .pic-2 {
-    position: relative;
     width: 791px;
     height: 874px;
-    background: url(../assets/images/c230ffba520fab60716f712257d7f6a7fc48a42f.png)
+    background-color: #3a5b22;
+    background: url(Front-End/src/assets/images/LoginImg.png)
         no-repeat center;
-    background-size: cover;
     z-index: 36;
 }
 .button {
@@ -520,5 +519,5 @@ button {
 }
 .button:hover{
     background:#679745;
-    box-shadow: #1a1a1a 2px;
+    border: 1px #679745;
 }
