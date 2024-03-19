@@ -11,5 +11,6 @@ export default function App() {
       <LoginPage />
       </main>
     </div>
+    
   );
 }
