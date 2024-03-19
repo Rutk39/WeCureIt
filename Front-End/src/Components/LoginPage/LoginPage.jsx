@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './LoginPage.css';
+//import Image from './LoginImg.png';
 
 export default function Main() {
     const [email, setEmail] = useState('');
@@ -20,7 +21,7 @@ export default function Main() {
                         <span className='text'>WeCureIt</span>
                         <div className='group-3'>
                             <div className='section-2'>
-                                <div className='pic' />
+                                <div className='pic'></div>
                             </div>
                         </div>
                     </div>
@@ -91,7 +92,7 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <div className='pic-2'><img src='Front-End/src/assets/react.svg'/></div>
+            <div className='pic-2'></div>
         </div>
     );
 }
