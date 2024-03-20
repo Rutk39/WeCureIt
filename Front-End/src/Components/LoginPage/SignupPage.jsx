@@ -179,7 +179,7 @@ export default function SignupPage() {
                                 </div>
                             </div>
                             <button type="submit">
-                            <label className='text-12'>Next</label>
+                            <label className='text-12' onClick={handleSubmit}>Next</label>
                             </button>
                             <div className='pic-3' />
                         </div>
