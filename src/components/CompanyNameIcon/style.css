@@ -1,0 +1,19 @@
+.company-name-icon {
+  height: 90px;
+  position: relative;
+  width: 191px;
+}
+
+.company-name-icon .text-wrapper-3 {
+  color: #1a1a1a;
+  font-family: "?????-??", Helvetica;
+  font-size: 31px;
+  font-weight: 400;
+  height: 90px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 90px;
+  position: absolute;
+  top: -1px;
+  white-space: nowrap;
+}

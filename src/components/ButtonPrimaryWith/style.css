@@ -1,0 +1,50 @@
+.button-primary-with {
+  align-items: center;
+  background-color: var(--baseblack);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  padding: 16px;
+  position: relative;
+  width: 190px;
+}
+
+.button-primary-with .frame-2 {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 9px;
+  justify-content: center;
+  position: relative;
+}
+
+.button-primary-with .button-name {
+  color: #ffffff;
+  font-family: var(--inter-semi-bold-16px-font-family);
+  font-size: var(--inter-semi-bold-16px-font-size);
+  font-style: var(--inter-semi-bold-16px-font-style);
+  font-weight: var(--inter-semi-bold-16px-font-weight);
+  letter-spacing: var(--inter-semi-bold-16px-letter-spacing);
+  line-height: var(--inter-semi-bold-16px-line-height);
+  margin-top: -1px;
+  position: relative;
+  text-align: right;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.button-primary-with .icon {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.button-primary-with .icon-outline-arrow {
+  height: 18px !important;
+  position: relative !important;
+  width: 18px !important;
+}

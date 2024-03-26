@@ -1,0 +1,123 @@
+.buttons {
+  height: 48px;
+  width: 409px;
+}
+
+.buttons .overlap-group {
+  height: 32px;
+  position: relative;
+  width: 404px;
+}
+
+.buttons .class {
+  box-shadow: 0px 4px 4px #00000040 !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.buttons .class-2 {
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+}
+
+.buttons .class-3 {
+  background-color: #3a5b22 !important;
+  border-color: #3a5b22 !important;
+}
+
+.buttons .class-4 {
+  background-color: #4e7830 !important;
+  border-color: #4e7830 !important;
+}
+
+.buttons .sign-up {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+}
+
+.buttons .text-wrapper-2 {
+  color: #ffffff;
+  font-family: "Poppins", Helvetica;
+  font-size: 13px;
+  font-weight: 700;
+  left: 171px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 5px;
+}
+
+.buttons .arrow {
+  height: 15px;
+  left: 211px;
+  position: absolute;
+  top: 9px;
+  width: 22px;
+}
+
+.buttons .variant-8 {
+  left: 185px;
+  top: 5px;
+}
+
+.buttons .variant-4 {
+  left: 185px;
+  top: 5px;
+}
+
+.buttons .variant-2 {
+  left: 185px;
+  top: 5px;
+}
+
+.buttons .variant-9 {
+  left: 185px;
+  top: 5px;
+}
+
+.buttons .variant-5 {
+  left: 185px;
+  top: 5px;
+}
+
+.buttons .variant-1 {
+  left: 185px;
+  top: 5px;
+}
+
+.buttons .variant-6 {
+  left: 148px;
+  top: 3px;
+}
+
+.buttons .variant-7 {
+  left: 148px;
+  top: 3px;
+}
+.buttons .savediv{
+  background-color: green;
+  border-radius: 10px;
+  cursor: pointer; /* 鼠标悬停时显示指针样式 */
+}
+.buttons .divwrapper {
+  display: flex;
+  align-items: center; /* 在交叉轴上居中对齐 */
+  justify-content: center; 
+  color: white;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+ 
+  border: none;
+}
+
