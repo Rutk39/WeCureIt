@@ -261,6 +261,54 @@
   top: 408px !important;
 }
 
+.user-edit-profile .framewrapper {
+  align-items: center;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  height: 32px;
+  overflow: hidden;
+  padding: 10px 0px 10px 10px;
+  position: relative;
+  width: 404px;
+}
+
+.user-edit-profile .variant-6 {
+  left: 148px;
+  top: 3px;
+}
+
+.user-edit-profile .overlap-group{
+  height: 32px;
+  position: relative;
+  width: 404px;
+}
+.user-edit-profile .savediv{
+  background-color: green;
+  border-radius: 10px;
+  cursor: pointer; 
+}
+
+.user-edit-profile .divwrapper{
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  color: white;
+  font-family: "Poppins", Helvetica;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+ 
+  border: none;
+}
+
+
+
+
 .user-edit-profile .frame-9 {
   align-items: flex-start;
   display: flex;
@@ -550,4 +598,9 @@
   height: 67px !important;
   overflow: hidden !important;
   width: 202px !important;
+}
+
+.user-edit-profile.f-wrapper{
+  color:#d9d9d9
+  
 }
