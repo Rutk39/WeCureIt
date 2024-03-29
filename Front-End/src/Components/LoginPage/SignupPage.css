@@ -537,7 +537,7 @@ button {
     position: relative;
     width: 404px;
     height: 69px;
-    margin: 151px 0 0 70px;
+    margin: 100px 0 0 70px;
     z-index: 18;
 }
 .wrapper-8 {
@@ -548,6 +548,7 @@ button {
     gap: 10px;
     position: relative;
     width: 100px;
+    margin: 10px 0px 0px;
     z-index: 19;
 }
 .text-c {
@@ -628,7 +629,7 @@ button {
     position: relative;
     width: 410px;
     height: 66px;
-    margin: 8px 0 0 70px;
+    margin: 60px 0 0 70px;
     z-index: 12;
 }
 .section-8 {
@@ -703,7 +704,7 @@ button {
     position: relative;
     width: 410px;
     height: 66px;
-    margin: 16px 0 0 69px;
+    margin: 5px 0 0 69px;
     z-index: 6;
 }
 .section-a {
@@ -1089,4 +1090,13 @@ button {
     text-align: left;
     white-space: nowrap;
     z-index: 29;
+}
+.wrapper-51{
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+    width: 58px;
+    z-index: 31;
 }

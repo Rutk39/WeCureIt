@@ -8,6 +8,7 @@ export default function SignupPage() {
     const [password, setPassword] = useState('');
     const [reenteredPassword, setReenteredPassword] = useState('');
     const [addressLine1, setAddressLine1] = useState('');
+    const [contactNumber, setContactNumber] = useState('');
     const [addressLine2, setAddressLine2] = useState('');
     const [city, setCity] = useState('');
     const [state, setState] = useState('');
@@ -123,8 +124,24 @@ export default function SignupPage() {
                                 />
                                 </div>
                             </div>
+                            
                         </div>
+                        
                         <div className='box-a'>
+                        <div className='wrapper-51'>
+                                <span className='text-3'>Contact Number</span>
+                            </div>
+                            <div>
+                                <div>
+                                <input 
+                                className='box-b'
+                                type='number'
+                                value={contactNumber}
+                                placeholder='contact Number'
+                                onChange={(e) => setContactNumber(e.target.value)}
+                                />
+                                </div>
+                            </div>
                             <div className='wrapper-8'>
                                 <span className='text-c'>Email address</span>
                             </div>
