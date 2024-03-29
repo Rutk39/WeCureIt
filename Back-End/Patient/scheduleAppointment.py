@@ -11,10 +11,13 @@
 
 from datetime import date, datetime, timedelta
 
+availableSpecialties = ["Internal Medicine", "Psychiatry", "Cardiology"]
+
 # Input: List of all appointments
 ## 1. doctorSchedule: [scheduleID, doctorID, daysVisiting, facilityVisiting, timeVisit, specialties]
 ## 2. filterRequested: [specialty, facility, doctor, date]
 def filterAppointments(doctorSchedule, filterRequested):
+    # ** NO PREFERENCE FOR ALL **
     # Check if all of the filterRequested is "No Preference":
     totalNoPreferece = 0
     for i in range(len(filterRequested)):
@@ -25,12 +28,17 @@ def filterAppointments(doctorSchedule, filterRequested):
     if totalNoPreferece == 4:
         return doctorSchedule
     
+    # ** EDGE CASE TESTING **
     # Edge Case: Date is past today's date
     if type(filterRequested[3]) == date:
         todayDate = date.today()
 
         if filterRequested[3] < todayDate:
             return None
+        
+    # Edge Case: Specialty is not provided
+    if filterRequested[0] not in availableSpecialties:
+        return None
     
     # Move appointments that match the filter to a different list to return
     filterAppointmentList = []
@@ -96,7 +104,7 @@ def main():
     else:
         print("Test #4: UNSUCCESSFUL")
 
-    # Test #5: Edge case testing
+    # Test #5: Edge case testing - not available date
     pastDate = date.today() - timedelta(days=5)
     filterRequested = ["Cardiology", "No Preference", "No Preference", pastDate]
 
@@ -106,22 +114,30 @@ def main():
     else:
         print("Test #5: UNSUCCESSFUL")
 
-    # Test #6: Appointment Length = 1 hours == 60 minutes from 7 AM to 5 PM
+    # Test #6: Edge case testing - not available specialty
+    filterRequested = ["Pediatric", "No Preference", "No Preference", "No Prefrence"]
+    availableAppointments = filterAppointments(doctorSchedule, filterRequested)
+    if availableAppointments == None:
+        print("Test #6: SUCCESSFUL")
+    else:
+        print("Test #6: UNSUCCESSFUL")
+
+    # Test #7: Appointment Length = 1 hours == 60 minutes from 7 AM to 5 PM
     startTime = datetime(2024, 4, 1, 7, 0, 0)
     endTime = datetime(2024, 4, 1, 17, 0, 0)
     
     availableTimes = calculateTimeInterval(startTime, endTime, 1)
     if len(availableTimes) == 10:
-        print("Test #6: SUCCESSFUL")
-    else:
-        print("Test #6: UNSUCCESSFUL")
-
-    # Test #7: Appointment Length = 30 minutes from 7 AM to 5 PM
-    availableTimes = calculateTimeInterval(startTime, endTime, 30)
-    if len(availableTimes) == 20:
         print("Test #7: SUCCESSFUL")
     else:
         print("Test #7: UNSUCCESSFUL")
+
+    # Test #8: Appointment Length = 30 minutes from 7 AM to 5 PM
+    availableTimes = calculateTimeInterval(startTime, endTime, 30)
+    if len(availableTimes) == 20:
+        print("Test #8: SUCCESSFUL")
+    else:
+        print("Test #8: UNSUCCESSFUL")
 
 
 if __name__ == "__main__":
