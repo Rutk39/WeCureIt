@@ -9,6 +9,8 @@
 ## 8. Recommendation is provided - NOTE: IN A DIFFERENT TICKET
 ## 9. Confirmation screen is displayed - Appointment should be stored into database
 
+from datetime import datetime, timedelta
+
 # Input: List of all appointments
 ## 1. doctorSchedule: [scheduleID, doctorID, daysVisiting, facilityVisiting, timeVisit, specialties]
 ## 2. filterRequested: [specialty, facility, doctor, date]
@@ -31,14 +33,23 @@ def filterAppointments(doctorSchedule, filterRequested):
                 if doctorSchedule[j][5] == filterRequested[i]:
                     filterAppointmentList.append(doctorSchedule[j])
 
-        elif i == 1 and filterRequested[i] != "No Preference": # Verify facility
-            print("TODO")
-        elif i == 2 and filterRequested[i] != "No Preference": # Verify doctor
-            print("TODO")
-        elif i == 3 and filterRequested[i] != "No Preference": # Verify date
-            print("TODO")
-
     return filterAppointmentList
+
+# Input: Selcted appointment length
+## 1. selectedAppLength: 15, 30, or 1
+def calculateTimeInterval(startTime, endTime, selectedAppLength):
+    if selectedAppLength == 1:
+        selectedAppLength = 60 # Convert to minutes
+    
+    seconds = (endTime - startTime).total_seconds()
+
+    step = timedelta(minutes=selectedAppLength)
+    availableTime = []
+    for i in range(0, int(seconds), int(step.total_seconds())):
+        availableTime.append(startTime + timedelta(seconds=i))
+    
+    availableTime = [i.strftime('%Y-%m-%d %H:%M%:%S') for i in availableTime]
+    return availableTime
 
 
 ##### TESTING #####
@@ -67,7 +78,7 @@ def main():
     else:
         print("Test #2: UNSUCCESSFUL")
 
-    # Test #3: Multiple filter set - TODO
+    # Test #3: Multiple filter set - TODO IN THE FUTURE
         
     # Test #4: No available appointments
     filterRequested = ["Psychiatry", "No Preference", "No Preference", "No Preference"]
@@ -77,6 +88,23 @@ def main():
         print("Test #4: SUCCESSFUL")
     else:
         print("Test #4: UNSUCCESSFUL")
+
+    # Test #5: Appointment Length = 1 hours == 60 minutes from 7 AM to 5 PM
+    startTime = datetime(2024, 4, 1, 7, 0, 0)
+    endTime = datetime(2024, 4, 1, 17, 0, 0)
+    
+    availableTimes = calculateTimeInterval(startTime, endTime, 1)
+    if len(availableTimes) == 10:
+        print("Test #5: SUCCESSFUL")
+    else:
+        print("Test #5: UNSUCCESSFUL")
+
+    # Test #6: Appointment Length = 30 minutes from 7 AM to 5 PM
+    availableTimes = calculateTimeInterval(startTime, endTime, 30)
+    if len(availableTimes) == 20:
+        print("Test #6: SUCCESSFUL")
+    else:
+        print("Test #6: UNSUCCESSFUL")
 
 
 if __name__ == "__main__":
