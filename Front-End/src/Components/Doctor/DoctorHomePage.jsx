@@ -99,52 +99,62 @@ function DoctorHomePage() {
   return (
     <div className='main-container'>
       <div className='section'>
-        <div className='topBar'>
-          <span>WeCureIT</span>
+          <div className='topBar'>
+            <span>WeCureIT</span>
+          </div>
+      </div>
+      <div className='main-container1'>
+        <div className="text-3">
+          <span>Friday Mar, 29</span>
+        </div>
+        <div className="calendar">
+          calendar
         </div>
       </div>
-      <div className='text-1'>Today's Appointment</div>
-      <div className="appointmentinfo">
+      <div className='main-container2'>
+        <div className='text-1'>Today's Appointment</div>
+        <div className="appointmentinfo">
+          <div className="wrapper">
+            <div style={containerStyle} className={"ag-theme-quartz"}>
+                <AgGridReact 
+                  rowData={rowData} 
+                  columnDefs={colDefs}
+                  rowStyle={rowStyle}
+                  getRowClass={getRowStyle}
+                  autoSizeStrategy={autoSizeStrategy}
+                  onGridSizeChanged={onGridSizeChanged}
+                />
+              </div>
+          </div>
+          <div className="wrapper2">
+            <div style={containerStyle} className={"ag-theme-quartz"}>
+                <AgGridReact 
+                  rowData={rowDataLoc} 
+                  columnDefs={colDefsLoc}
+                  autoSizeStrategy={autoSizeStrategy}
+                  onGridSizeChanged={onGridSizeChanged}
+                />
+              </div>
+          </div>
+        </div>
+        <div className="text-2">Upcoming Appointments</div>
+        <div className="nextappointment">
         <div className="wrapper">
-           <div style={containerStyle} className={"ag-theme-quartz"}>
-              <AgGridReact 
-                rowData={rowData} 
-                columnDefs={colDefs}
-                rowStyle={rowStyle}
-                getRowClass={getRowStyle}
-                autoSizeStrategy={autoSizeStrategy}
-                onGridSizeChanged={onGridSizeChanged}
-              />
-            </div>
-        </div>
-        <div className="wrapper2">
-           <div style={containerStyle} className={"ag-theme-quartz"}>
-              <AgGridReact 
-                rowData={rowDataLoc} 
-                columnDefs={colDefsLoc}
-                autoSizeStrategy={autoSizeStrategy}
-                onGridSizeChanged={onGridSizeChanged}
-              />
-            </div>
-        </div>
+            <div style={containerStyle} className={"ag-theme-quartz"}>
+                <AgGridReact 
+                  rowData={rowDataup} 
+                  columnDefs={colDefsup}
+                  rowStyle={rowStyle}
+                  getRowClass={getRowStyle}
+                  autoSizeStrategy={autoSizeStrategy}
+                  onGridSizeChanged={onGridSizeChanged}
+                />
+              </div>
+          </div>
+        </div> 
       </div>
-      <div className="text-2">Upcoming Appointments</div>
-      <div className="nextappointment">
-      <div className="wrapper">
-           <div style={containerStyle} className={"ag-theme-quartz"}>
-              <AgGridReact 
-                rowData={rowDataup} 
-                columnDefs={colDefsup}
-                rowStyle={rowStyle}
-                getRowClass={getRowStyle}
-                autoSizeStrategy={autoSizeStrategy}
-                onGridSizeChanged={onGridSizeChanged}
-              />
-            </div>
-        </div>
-      </div>
-      
     </div>
+    
   )
 }
 
