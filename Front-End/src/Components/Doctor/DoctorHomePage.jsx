@@ -215,7 +215,10 @@ function DoctorHomePage() {
         </div>
       </div>
       <div className='main-container2'>
-        <div className='text-1'>Today's Appointment</div>
+        <div className='text-1'>Today's Appointment
+        <button className="viewAppoint" onClick={"./LoginPage"}><label className="text-15">View all appointments</label></button>
+        </div>
+        
         <div className="appointmentinfo">
           <div className="wrapper">
             <div style={containerStyle} className={"ag-theme-quartz"}>
