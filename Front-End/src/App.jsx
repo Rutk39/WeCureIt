@@ -5,6 +5,7 @@ import React from 'react'
 import DoctorHomePage from './Components/Doctor/DoctorHomePage';
 //import SignupPage2 from './Components/LoginPage/SignupPage2';
 //import { UserEditProfile } from './Components/UserEdit/UserEditProfile';
+//import CalView from './Components/CalView/CalView';
 
 export default function App() {
   return (

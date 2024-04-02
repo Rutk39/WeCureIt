@@ -3,16 +3,24 @@ import React, {
   useMemo,
   useRef,
   useState,
-  StrictMode,
 } from "react";
+import dayjs from "dayjs";
 import { createRoot } from 'react-dom/client';
 import {AgGridReact } from 'ag-grid-react'; // AG Grid Component
 import "ag-grid-community/styles/ag-grid.css"; // Mandatory CSS required by the grid
 import "ag-grid-community/styles/ag-theme-quartz.css";
-
+import { generateDate, months } from "./calendar";
+import cn from "./cn";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import './CalView.css';
 import './DoctorHomePage.css'
 
 function DoctorHomePage() {
+  const days = ["S", "M", "T", "W", "T", "F", "S"];
+	const currentDate = dayjs();
+	const [today, setToday] = useState(currentDate);
+	const [selectDate, setSelectDate] = useState(currentDate);
+
   // Row Data: The data to be displayed.
   const [rowData, setRowData] = useState([
     { PatientName: "Nancy Smith", DateTime: "03/18/2024 10:00 AM - 10:30 AM", PatientMedicalInformation: "Medical Info", Completed: true },
@@ -105,10 +113,105 @@ function DoctorHomePage() {
       </div>
       <div className='main-container1'>
         <div className="text-3">
-          <span>Friday Mar, 29</span>
+          <span>{months[today.month()]} {[today.date()]}, {today.year()}</span>
         </div>
-        <div className="calendar">
-          calendar
+        <div className="calendar1">
+          <div className="CalendarCont">
+            <div className="header">
+                <h1 className="h1">
+                {months[today.month()]}, {today.year()}
+                </h1>
+                <div className="header2">
+                <GrFormPrevious
+							className="w-5 h-5 cursor-pointer hover:scale-105 transition-all"
+							onClick={() => {
+								setToday(today.month(today.month() - 1));
+							}}
+						/>
+                        <h1
+							className=" currentDate hover:scale-105 transition-all"
+							onClick={() => {
+								setToday(currentDate);
+							}}
+						>
+							Today
+						</h1>
+                        <GrFormNext
+							className="w-5 h-5 cursor-pointer hover:scale-105 transition-all"
+							onClick={() => {
+								setToday(today.month(today.month() + 1));
+							}}
+						/>
+                </div>
+            </div>
+            <div className="daySec">
+                {days.map((day, index) => {
+                            return (
+                                <span
+                                    key={index}
+                                    className="day"
+                                >
+                                    {day}
+                                </span>
+                            );
+                        })}
+            </div>
+            <div className="daySec2">
+            {generateDate(today.month(), today.year()).map(
+						({ date, currentMonth, today }, index) => {
+							return (
+								<div
+									key={index}
+									className="dateBlock"
+								>
+									<div
+										className={cn(
+											currentMonth ? "" : "date text-black",
+											today
+												? "bg-red-600"
+												: "",
+											selectDate
+												.toDate()
+												.toDateString() ===
+												date.toDate().toDateString()
+												? "bg-black"
+												: "",
+											"date"
+										)}
+										onClick={() => {
+											setSelectDate(date);
+										}}
+									>
+										{date.date()}
+									</div>
+								</div>
+							);
+						}
+					)}
+            </div>
+
+        </div>
+        </div>
+        <div className="locInfo">
+          <span className='text-11'>
+            Your Schedule for {selectDate.toDate().toDateString()}
+            <br />
+            <br />
+          </span>
+          <span className='text-12'>
+            9:00 AM - 4:00 PM (5 Hours 30 Mins)
+            <br />
+            <br/>
+          </span>
+          <span className='text-13'>Location: <br /><br/></span>
+          <span className='text-14'>
+            The George Washington University Hospital</span>
+            <br />
+            <span className='text-14'>900 23rd St. NW</span>
+            <br />
+            <span className='text-14'>Washington D.C.,20037
+          </span>
+          <button className="viewSchdl" onClick={"./LoginPage"}><label className="text-15">View Schedule</label></button>
         </div>
       </div>
       <div className='main-container2'>
