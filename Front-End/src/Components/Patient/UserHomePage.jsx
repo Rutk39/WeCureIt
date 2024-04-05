@@ -12,7 +12,7 @@ export const UserHomePage = () => {
                 <div className={styles['main-container2']}>
       <span className={styles['we-cure-it']}>WeCureIt</span>
       <div className={styles['vector']} />
-    </div>
+              </div>
 
 
                   <div  className={styles['create-appointment-button']}>
@@ -24,11 +24,10 @@ export const UserHomePage = () => {
                       </div>
                     </button>
                   </div>
-
-
                   <div  className={styles['profile']}>
                     <div  className={styles['unsplash-ctagwpbqg']} />
                   </div>
+
                 </div>
               </div>
               <span  className={styles['upcoming-appointments']}>Upcoming Appointments</span>

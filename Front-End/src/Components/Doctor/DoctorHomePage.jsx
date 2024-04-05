@@ -106,6 +106,8 @@ function DoctorHomePage() {
 
   return (
     <div className='main-container'>
+
+      
       <div className='section'>
           <div className='topBar'>
             <span>WeCureIT</span>
