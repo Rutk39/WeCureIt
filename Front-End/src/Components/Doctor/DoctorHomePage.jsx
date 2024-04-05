@@ -12,6 +12,7 @@ import "ag-grid-community/styles/ag-theme-quartz.css";
 import { generateDate, months } from "./calendar";
 import cn from "./cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+import logo from '/src/assets/images/Logo.png';
 import './CalView.css';
 import './DoctorHomePage.css'
 
@@ -110,7 +111,8 @@ function DoctorHomePage() {
       
       <div className='section'>
           <div className='topBar'>
-            <span>WeCureIT</span>
+          <img src={logo} alt="WeCureIt" className='logo'/>
+            <span className='logoTitle'>WeCureIT</span>
           </div>
       </div>
       <div className='main-container1'>

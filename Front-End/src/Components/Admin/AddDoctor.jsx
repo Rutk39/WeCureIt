@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import DualListBox from 'react-dual-listbox';
 import 'react-dual-listbox/lib/react-dual-listbox.css';
+import logo from '/src/assets/images/Logo.png';
+import edit from '/src/assets/edit.svg';
 import './AddDoctor.css'
 
 function AddDoctor() {
@@ -40,13 +42,27 @@ function AddDoctor() {
     <div className='main-container'>
         <div className='section'>
           <div className='topBar'>
-            <span>WeCureIT</span>
+          <img src={logo} alt="WeCureIt" className='logo'/>
+            <span className='logoTitle'>WeCureIT</span>
           </div>
       </div>
         <div className='main-container1'>
-            <div className='edit'></div>
-            <span className='text-1'>Add/Manage Doctor</span><br />
-            <span className='text-2'>Add/Manage Facility</span>
+            <div className='content'>
+                <table>
+                    <tr>
+                        <td> <img src={edit} alt="WeCureIt" className='edit'/></td>
+                        <td className='text-1'>Add/Manage Doctor</td>
+                    </tr>
+                    <tr>
+                        <td> <img src={edit} alt="WeCureIt" className='edit'/></td>
+                        <td className='text-2'>Add/Manage Facility</td>
+                    </tr>
+                </table>
+                
+            </div>
+               
+                
+                
         </div>
         <div className='main-container2'>
             <h1 className='h1'> Edit Doctor's Information</h1>

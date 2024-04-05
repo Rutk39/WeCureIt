@@ -31,7 +31,7 @@
         width: 30%;
         height: 982px;
         margin: 0px auto;
-        padding: 250px 10px 10px 10px;
+        padding: 250px 0px 0px 0px;
         overflow: hidden;
         }
         .nameGroup {
@@ -88,9 +88,7 @@
     }
     .text-1{
         position: relative;
-        width: 171.973px;
         height: 73px;
-        margin: 0x auto;
         color: #1b1b1b;
         font-family: Poppins, var(--default-font-family);
         font-size: 16px;
@@ -255,14 +253,45 @@
         text-shadow: #868383;
     }
     .edit {
-        position: absolute;
-        width: 45.861px;
-        height: 34.767px;
-        top: 248px;
-        left: 185px;
-        background: url(../assets/images/dc029b07-10d2-4b30-82d9-e795f3941ff8.png)
-          no-repeat center;
+        position: relative;
+        color: #1b1b1b;
+        width: 35px;
+        height: 35px;
+        margin-left: 0px;
+        margin-top: 0px;
+        left: 0px;
         background-size: cover;
         z-index: 3;
         overflow: hidden;
+      }
+      .logo{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 24.24%;
+        left:14%;
+        background-size: 100% 100%;
+        z-index: 3;
+      }
+      .logoTitle{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: absolute;
+        height: 87.38%;
+        top: 5.83%;
+        left: 0;
+        color: #1a1a1a;
+        font-family: 'Times New Roman', Times, serif, var(--default-font-family);
+        font-size: 31px;
+        font-weight: 400;
+        line-height: 90px;
+        text-align: left;
+        margin-left: 30px;
+        white-space: nowrap;
+      }
+      .content{
+        position: relative;
+        justify-content: center;
+        margin-left: 50px;
       }
