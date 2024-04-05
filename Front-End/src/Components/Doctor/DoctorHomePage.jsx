@@ -13,6 +13,7 @@ import { generateDate, months } from "./calendar";
 import cn from "./cn";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import logo from '/src/assets/images/Logo.png';
+import profile from '/src/assets/images/profile.png';
 import './CalView.css';
 import './DoctorHomePage.css'
 
@@ -111,8 +112,15 @@ function DoctorHomePage() {
       
       <div className='section'>
           <div className='topBar'>
-          <img src={logo} alt="WeCureIt" className='logo'/>
+            <img src={logo} alt="WeCureIt" className='logo'/>
             <span className='logoTitle'>WeCureIT</span>
+            <div className="tabs">
+              <button className="tab1">View/Add Schedule</button>
+              <button className="tab2">View Appointment</button>
+            </div>
+            <div>
+              <button className="profile"><img src={profile} alt="WeCureIt" className='profilepic'/></button>
+            </div>
           </div>
       </div>
       <div className='main-container1'>

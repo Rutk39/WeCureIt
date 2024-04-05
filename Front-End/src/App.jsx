@@ -2,8 +2,8 @@ import React from 'react'
 //import LoginPage from './Components/LoginPage/LoginPage';
 //import { UserHomePage } from './Components/Patient/UserHomePage';
 //import SignupPage from './Components/LoginPage/SignupPage';
-//import DoctorHomePage from './Components/Doctor/DoctorHomePage';
-import AddDoctor from './Components/Admin/AddDoctor';
+//import AddDoctor from './Components/Admin/AddDoctor';
+import DoctorHomePage from './Components/Doctor/DoctorHomePage';
 //import { GrUnsorted } from 'react-icons/gr';
 // import { UserHomePage } from './Components/Patient/UserHomePage';
 //import SignupPage2 from './Components/LoginPage/SignupPage2';
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className='app'>
       <main>
-      <AddDoctor/>
+      <DoctorHomePage/>
       </main>
     </div>
     

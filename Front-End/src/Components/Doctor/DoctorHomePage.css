@@ -266,3 +266,75 @@
         margin-left: 30px;
         white-space: nowrap;
       }
+      .tab1{
+        position: relative;
+        justify-content: center;
+        height: 103px;
+        margin-left: 450px;
+        border-width: 0px;
+        background-color: #c0cef1;
+      }
+      .tab1:hover{
+        position: relative;
+        justify-content: center;
+        height: 103px;
+        margin-left: 450px;
+        background-color: #E7E7FF;
+        border-width: 0px 0px 10px 0px;
+        border-color: #8080ea;
+      }
+      .tab2{
+        position: relative;
+        justify-content: center;
+        height: 103px;
+        margin-left: 300px;
+        border-width: 0px;
+        background-color: #c0cef1;
+      }
+      .tab2:hover{
+        position: relative;
+        justify-content: center;
+        height: 103px;
+        margin-left: 300px;
+        background-color: #E7E7FF;
+        border-width: 0px 0px 10px 0px;
+        border-color: #8080ea;
+      }
+      .tab1{
+        justify-content: center;
+        position: relative;
+        color: #1a1a1a;
+        font-family: Noto Sans, var(--default-font-family);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .tab2{
+        justify-content: center;
+        position: relative;
+        color: #1a1a1a;
+        font-family: Noto Sans, var(--default-font-family);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        white-space: nowrap;
+      }
+      .profilepic{
+        position: relative;
+        width: 50px;
+        height: 50px;
+      }
+      .profile{
+        position: relative;
+        height: 50px;
+        width: 50px;
+        border-radius: 30px;
+        margin-right: 40px;
+        margin-top: 20px;
+        border-width: 0px;
+        background-color: #c0cef1;
+      }
+
